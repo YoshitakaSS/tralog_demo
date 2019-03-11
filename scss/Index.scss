@@ -1,0 +1,310 @@
+// モバイル用の横幅判定
+$mobileMaxWidth: 670px;
+
+body {
+    margin: 0;
+    font-family: system-ui, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo, sans-serif;
+}
+
+ul {
+    padding-left: 0px;
+}
+
+li {
+    list-style: none!important;
+}
+
+h3 {
+    margin: 5px 30px;
+    padding: 10px 55px;
+    text-align: center;
+    position: relative;
+
+    &::before, &::after {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        height: 1px;
+        width: 20%;
+        top: 50%;
+        background-color: #0a2099;
+    }
+
+    &::before {
+        left: 10%;
+    }
+
+    &::after {
+        right: 10%;
+    }
+}
+
+// overlay用
+.non-active {
+    display: none;
+}
+
+.overlay {
+    background: #4b4949;
+    z-index: 20;
+    margin: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    position: fixed;
+}
+
+/* header */
+header {
+    display: flex;
+    height: 60px;
+
+    .top-logo {
+        padding: 20px;
+        font-size: 22px;
+
+        h1 {
+            font-size: 24px;
+            display: inline;
+            font-family: "Helvetica Neue", HelveticaNeue, Arial, sans-serif;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #B2B2B2;
+    }
+
+    // PC画面用のヘッダーリンク
+    .header-link_pc {
+        display: flex;
+        margin-left: auto;
+        margin-top: 10px;
+
+        @media (max-width: $mobileMaxWidth) {
+            display: none;
+        }
+    }
+
+    // Mobile用のヘッダーリンク
+    .menu-icon {
+        display: flex;
+        font-size: 25px;
+        margin-left: auto;
+        margin-top: 25px;
+        margin-right: 20px;
+
+        @media (min-width: $mobileMaxWidth) {
+            display: none;
+        }
+    }
+
+    .link-list_mobile {
+        display: none;
+    }
+
+    li {
+        font-size: 17px;
+        padding: 14px;
+        margin-bottom: auto;
+        
+        &:hover {
+            background-color: #eeeeee;
+        }
+    }
+}
+/* headerここまで */
+
+.container {
+    margin: 10px auto;
+}
+
+/* topwrapper */
+.top-wrapper {
+    background-image: url('http://placehold.jp/400x400.png?text=TOP_IMAGE');
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    margin: 10px auto;
+}
+
+.main-wrapper {
+
+    .main-explain {
+        text-align: center;
+        padding: 10px;
+
+        h2 {
+            font-size: 22px;
+        }
+
+        p { 
+            letter-spacing: 1px;
+            line-height: 2;
+            padding: 12px 15px;
+            
+            @media (max-width: $mobileMaxWidth) {
+                text-align: justify;
+            }
+        }
+    }
+}
+
+.tenpo-wrapper {
+    margin: 30px 80px;
+
+    @media (max-width: $mobileMaxWidth) {
+        margin: 20px 10px;
+    }
+
+    .tenpo-list-contents {
+        padding: 15px;
+        
+        @media (min-width: $mobileMaxWidth) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .tenpo-info {
+            border-bottom: 1px solid #dadada;
+            padding-bottom: 10px;
+            margin: 30px;
+
+            @media (max-width: $mobileMaxWidth) {
+                margin: 5px;
+            }
+        }
+
+        .tenpo-info-detail {
+
+            img {
+                @media (max-width: $mobileMaxWidth) {
+                    width: 100%;
+                }
+            }
+
+            .icon {
+                margin-right: 8px;
+                font-size: 17px;
+            }
+
+            .about-tenpo {
+                color: #838080;
+                margin: 0 10px;
+                
+                .tenpo-place {
+                    color: #838080;
+                    font-size: 13px;
+                    letter-spacing: 2px;  
+                }
+
+                .tenpo-average-price {
+                    .fa-sun {
+                        color: #fa6f12;
+                    }
+
+                    .fa-moon {
+                        color: #fffb15;
+                        background-color: #0a2099;
+                    }
+                }
+
+                .tenpo-topic-list {
+                    .fa-credit-card {
+                        color: #c53030;
+                    }
+
+                    .topic-active {
+                        color: #0fb446;
+                    }
+
+                     li {
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+    .next-tenpo-detail {
+        padding: 11px;
+        color: #919191;
+        width: 180px;
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        border: 1px solid #8a8686;
+        
+        &:hover {
+            span {
+                border-bottom: 1px solid #696969;
+            }
+        }
+    }
+}
+
+.topic-wrapper {
+    margin: 10px 80px;
+
+    @media (max-width: $mobileMaxWidth) {
+        margin: 10px 20px;
+    }
+
+    // 使用するのか不明なので一旦待ち
+    // .topic-list {
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     margin: 0 auto;
+
+    //     .topic-item {
+    //         padding: 15px;
+    //         text-align: justify;
+    //         width: 100px;
+    //         height: 80px;
+    //         background-color: #f4f5efbd;
+    //         border: 1px solid #c7c7c7;
+
+    //         .topic-name {
+    //             .topic-icon {
+    //                 font-size: 30px;
+    //                 display: block;
+    //                 text-align: center;
+    //             }       
+    //         }
+    //     }
+    // }
+}
+
+footer {
+    padding: 15px;
+    background-color: #eee;
+
+    .footer-item {
+        h5 {
+            font-size: 16px;
+        }
+
+        a {
+            color: #929292;
+            text-decoration: none;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 13px;
+    
+            li {
+                margin-right: 6px;
+            }
+        }
+    }
+
+    .copyright {
+        font-size: 12px;
+        color: #929292;
+        text-align: center;
+    }
+}
