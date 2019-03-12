@@ -1,0 +1,113 @@
+// モバイル用の横幅判定
+$mobileMaxWidth: 670px;
+$borderColor: #aaa8a8;
+
+.tenpo-image-content {
+    img {
+        width: 100%;
+        height: 40vw;
+    }
+}
+
+.tenpo-main-wrapper {
+    position: relative;
+
+    @media (min-width: $mobileMaxWidth) {
+        width: calc(100% - 450px);    
+    }
+    
+    .tenpo-top-wrapper {
+
+        .tenpo-topic-wrapper {
+            padding: 10px 20px;
+            .tenpo-topic-contents {
+                border-bottom: 1px solid $borderColor;
+                margin-top: 8px;
+                .topic-detail {
+                    .icon {
+                        margin-right: 5px;
+                    }
+                    
+                    .topic-active {
+                        color: #0fb446;
+                    }
+
+                    .topic-detail-heading {
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+
+                    .topic-detail-title {
+                        font-size: 14px;
+                        margin-top: 5px;
+                    }
+
+                    .topic-detail-description {
+                        color: #7a7a7a;
+                        font-size: 12px;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+
+    // 店舗情報
+    .tenpo-info-wrapper {
+        padding: 10px 20px;
+        letter-spacing: 1px;
+
+        .info-item {
+            border-bottom: 1px solid $borderColor;
+            padding: 12px 0px;
+            .info-item-title {
+                color: #3b5a83;
+                font-size: 17px;
+                margin-bottom: 8px;
+            }
+
+            .info-item-text {
+                color: #1b1b1b;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+// PC画面用のコンテンツ
+.tenpo-side-wrapper {
+    position: absolute;
+    border: 1px solid #eeee;
+    right: 30px;
+    height: 300px;
+    width: 380px;
+    border-radius: 3px;
+    box-shadow: 0 4px 6px rgba(168, 172, 175, 0.8);
+
+    // モバイル画面では表示しない
+    @media (max-width: $mobileMaxWidth) {
+        display: none;
+    }
+
+    .btn {
+        padding: 15px;
+        margin: 10px 20px;
+        border: 1px solid #b9b9b9;
+        text-align: center;
+        // color: #7a7a7a;
+        color: #e6e6e6;
+        border-radius: 2px;
+    }
+
+    .reservation {
+        background-color: #1088b8;
+    }
+
+    .favorite {
+        background-color: #9b0e50;
+        
+        .fa-star {
+            color: #ffee00;
+        }
+    }
+}
