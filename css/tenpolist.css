@@ -1,0 +1,57 @@
+@charset "UTF-8";
+.tenpo-list-wrapper {
+  margin: 10px 80px; }
+  @media (max-width: 670px) {
+    .tenpo-list-wrapper {
+      margin: 20px 10px; } }
+  .tenpo-list-wrapper h2 {
+    position: relative;
+    padding: 10px 35px;
+    text-align: center;
+    color: #969696;
+    font-size: 20px; }
+    .tenpo-list-wrapper h2::before, .tenpo-list-wrapper h2::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      display: inline-block;
+      width: 12%;
+      height: 2px;
+      border-top: solid 1px black;
+      border-bottom: solid 1px black; }
+    .tenpo-list-wrapper h2::before {
+      left: 0; }
+    .tenpo-list-wrapper h2::after {
+      right: 0; }
+  .tenpo-list-wrapper .tenpo-list {
+    display: flex;
+    flex-wrap: wrap; }
+    .tenpo-list-wrapper .tenpo-list .tenpo-item {
+      margin: 10px;
+      width: 30%;
+      border-top: 1px solid #888585;
+      border-bottom: 1px solid #888585; }
+      @media (max-width: 670px) {
+        .tenpo-list-wrapper .tenpo-list .tenpo-item {
+          width: calc(50% - 20px); } }
+      .tenpo-list-wrapper .tenpo-list .tenpo-item img {
+        width: 100%; }
+      .tenpo-list-wrapper .tenpo-list .tenpo-item .item-detail {
+        margin-top: 7px;
+        font-size: 14px;
+        color: #969696;
+        word-break: break-all; }
+        .tenpo-list-wrapper .tenpo-list .tenpo-item .item-detail .tenpo-item-topic {
+          font-size: 12px; }
+          .tenpo-list-wrapper .tenpo-list .tenpo-item .item-detail .tenpo-item-topic .icon {
+            margin-right: 4px; }
+  .tenpo-list-wrapper .pagenation ul {
+    display: flex;
+    justify-content: center;
+    /* 子要素をflexboxにより中央に配置する */
+    align-items: center;
+    /* 子要素をflexboxにより中央に配置する */ }
+    .tenpo-list-wrapper .pagenation ul li {
+      padding: 8px;
+      text-align: center;
+      border: 1px solid #888585; }
