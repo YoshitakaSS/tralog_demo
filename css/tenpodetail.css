@@ -1,9 +1,34 @@
+@charset "UTF-8";
+h2 {
+  position: relative;
+  padding: 0.25em 1em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+  text-align: center;
+  font-size: 18px; }
+  h2::before, h2::after {
+    position: absolute;
+    content: '';
+    top: -7px;
+    width: 2px;
+    height: -webkit-calc(100% + 14px);
+    height: calc(100% + 14px);
+    background-color: black; }
+  h2::before {
+    left: 7px; }
+  h2::after {
+    right: 7px; }
+
 .tenpo-image-content img {
   width: 100%;
   height: 40vw; }
 
 .tenpo-main-wrapper {
-  position: relative; }
+  position: relative;
+  /**
+     * 店舗側が自由に入力できる項目 
+     * tenpo-explain-wrapper
+     * */ }
   @media (min-width: 670px) {
     .tenpo-main-wrapper {
       width: calc(100% - 450px); } }
@@ -39,6 +64,14 @@
       .tenpo-main-wrapper .tenpo-info-wrapper .info-item .info-item-text {
         color: #1b1b1b;
         font-size: 13px; }
+  .tenpo-main-wrapper .tenpo-explain-wrapper {
+    padding: 10px 20px;
+    letter-spacing: 1px; }
+    .tenpo-main-wrapper .tenpo-explain-wrapper .tenpo-explain .tenpo-explain-text {
+      letter-spacing: 1.7px;
+      line-height: 1.8;
+      font-size: 0.9em;
+      color: slategray; }
 
 .tenpo-side-wrapper {
   position: absolute;
