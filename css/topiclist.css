@@ -1,0 +1,42 @@
+@charset "UTF-8";
+.topic-list-wrapper {
+  margin: 10px 0;
+  background-color: #fcfcf0; }
+  .topic-list-wrapper .topic-list-items {
+    max-width: 870px;
+    margin: 0 auto; }
+    .topic-list-wrapper .topic-list-items .topic-item {
+      background-color: #ffffff;
+      border: 1px solid #e7e7e7;
+      margin-top: 15px; }
+      .topic-list-wrapper .topic-list-items .topic-item h3 {
+        padding: 5px 12px;
+        word-break: break-all; }
+      .topic-list-wrapper .topic-list-items .topic-item .topic-main-view {
+        height: 270px;
+        background-image: url(http://placehold.jp/1000×1000.png?text=特集写真);
+        background-size: cover; }
+      .topic-list-wrapper .topic-list-items .topic-item .topic-text {
+        padding: 12px;
+        letter-spacing: 2px;
+        line-height: 1.4;
+        color: #717171;
+        font-family: -apple-system, system-ui, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo, sans-serif; }
+        .topic-list-wrapper .topic-list-items .topic-item .topic-text p {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 6;
+          overflow: hidden; }
+      .topic-list-wrapper .topic-list-items .topic-item a {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        padding: 14px;
+        background-color: #02c712;
+        box-shadow: 0 4px 6px rgba(168, 172, 175, 0.8);
+        margin-left: 55vw;
+        margin-bottom: 0.7em;
+        width: 120px; }
+        .topic-list-wrapper .topic-list-items .topic-item a span:hover {
+          border-bottom: 1px solid white; }
